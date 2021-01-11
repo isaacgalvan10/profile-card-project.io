@@ -1,0 +1,132 @@
+@import url("https://fonts.google.com/specimen/Kumbh+Sans");
+
+$dark-cyan: hsl(185, 75%, 39%);
+$very-dark-blue: hsl(229, 23%, 23%);
+$dark-grayish-blue: hsl(227, 10%, 46%);
+$dark-gray: hsl(0, 0%, 59%);
+
+body {
+  background-color: $dark-cyan;
+  font-family: 'Kumbh Sans', sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.bg {
+  position: absolute;
+  background: url('./images/bg-pattern-bottom.svg') bottom -500px right -300px / 1100px 1100px no-repeat, 
+  url('./images/bg-pattern-top.svg') top -500px left -300px / 1100px 1100px no-repeat;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.card {
+  background: white;
+  width: 500px;
+  height: auto;
+  border-radius: 20px;
+  color: $very-dark-blue;
+  margin: 50px 0;
+
+  .card-bg {
+    width: 100%;
+    height: 200px;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+    object-fit: cover;
+  }
+
+  .profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    top: -75px;
+    padding-bottom: 35px;
+    border-bottom: 1px solid $dark-gray;
+
+    .profile-pic {
+      border-radius: 50%;
+      border: 5px solid white;
+      margin-bottom: 25px;
+      height: 150px;
+      width: 150px;
+    }
+
+    h1 {
+      font-size: 1.8em;
+    }
+
+    .age {
+      color: $dark-grayish-blue;
+      font-weight: 400;
+      font-size: .8em;
+      margin-left: 5px;
+    }
+
+    .city {
+      color: $dark-grayish-blue;
+      margin-top: 8px;
+      font-size: 1.2em;
+    }
+  }
+
+  .stats {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+    padding-bottom: 30px;
+    margin-top: -35px;
+
+    .numbers {
+      font-size: 1.8em;
+      font-weight: bold;
+    }
+
+    .sub-title {
+      color: $dark-grayish-blue;
+      font-size: .9em;
+      letter-spacing: 2px;
+    }
+  }
+}
+
+
+.attribution { 
+  font-size: 11px; 
+  text-align: center; 
+}
+
+.attribution a { 
+  color: hsl(228, 45%, 44%); 
+}
+
+@media (max-width: 1400px) {
+  .bg {
+    background: url(./images/bg-pattern-bottom.svg) bottom -60vw right -50vw / 100vw 100vw no-repeat,
+    url(./images/bg-pattern-top.svg) top -50vw left -60vw / 100vw 100vw no-repeat;
+  }
+}
+
+@media (max-width: 650px) {
+  .bg {
+    background: url(./images/bg-pattern-bottom.svg) bottom -30vw right -50vw / 100vw 100vw no-repeat,
+    url(./images/bg-pattern-top.svg) top -40vw left -40vw / 100vw 100vw no-repeat;
+  }
+
+  .card {
+    min-width: 320px;
+    width: 80%;
+  }
+}
+
+@media (max-width: 375px) {
+  .bg {
+    background: url(./images/bg-pattern-bottom.svg) bottom -40vw right -60vw / 130vw 130vw no-repeat,
+    url(./images/bg-pattern-top.svg) top -50vw left -70vw / 130vw 130vw no-repeat;
+  }
+}
